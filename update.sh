@@ -1,0 +1,1 @@
+curl -s https://api.github.com/repos/faermanj/utils.sh/releases/latest | jq -r '.assets[] | select(.name=="utils.sh" or .name=="bin/utils.sh") | .browser_download_url' | xargs -n 1 curl -sL -o utils.sh

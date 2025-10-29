@@ -1,5 +1,10 @@
 #!/bin/bash
 # Utility functions for bash scripts
+# Source:
+#   https://github.com/faermanj/utils.sh
+# Update command:
+#   curl -s https://api.github.com/repos/faermanj/utils.sh/releases/latest | jq -r '.assets[] | select(.name=="utils.sh" or .name=="bin/utils.sh") | .browser_download_url' | xargs -n 1 curl -sL -o utils.sh
+
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-${(%):-%N}}")" >/dev/null 2>&1 && pwd)"
 
 # Define colors
