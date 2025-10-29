@@ -8,12 +8,12 @@
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-${(%):-%N}}")" >/dev/null 2>&1 && pwd)"
 
 # Define colors
-readonly RED="\033[0;31m"
-readonly GREEN="\033[0;32m"
-readonly YELLOW="\033[0;33m"
-readonly BLUE="\033[0;34m"
-readonly NO_COLOR="\033[0m"
-readonly MAGENTA="\033[0;35m"
+RED="\033[0;31m"
+GREEN="\033[0;32m"
+YELLOW="\033[0;33m"
+BLUE="\033[0;34m"
+NO_COLOR="\033[0m"
+MAGENTA="\033[0;35m"
 
 # Generic log function
 LOG_FORMAT="{color}{timestamp} [{level}] {message}{nocolor}"
