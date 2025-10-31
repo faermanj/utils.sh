@@ -14,6 +14,7 @@ YELLOW="\033[0;33m"
 BLUE="\033[0;34m"
 NO_COLOR="\033[0m"
 MAGENTA="\033[0;35m"
+CYAN="\033[0;36m"
 
 # Generic log function
 LOG_FORMAT="{color}{timestamp} [{level}] {message}{nocolor}"
@@ -35,6 +36,7 @@ log() {
         WARN) color="$YELLOW" ;;
         ERROR) color="$RED" ;;
         TRACE) color="$MAGENTA" ;;
+        PERF) color="$CYAN" ;;
     esac
 
         # Use user-definable format
@@ -66,4 +68,8 @@ error() {
 
 trace() {
     log "TRACE" "$@"
+}
+
+perf() {
+    log "PERF " "$@"
 }
